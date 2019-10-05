@@ -1,0 +1,60 @@
+{
+  "name": "polling-bot",
+  "version": "1.0.0",
+  "description": "Remake of Simple Poll",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "dev": "nodemon src/index.ts",
+    "typecheck": "tsc --project . --noEmit",
+    "tsc": "tsc",
+    "test": "jest",
+    "test-watch": "jest --watchAll",
+    "expose": "npm start && lt --port 3000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodeColde/polling-slackbot.git"
+  },
+  "author": "CodeColde",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CodeColde/polling-slackbot/issues"
+  },
+  "homepage": "https://github.com/CodeColde/polling-slackbot#readme",
+  "dependencies": {
+    "@slack/web-api": "^5.1.0",
+    "@types/express": "^4.17.1",
+    "@types/jest": "^24.0.15",
+    "@types/node": "^12.0.12",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "nodemon": "^1.19.1",
+    "ts-jest": "^24.0.2",
+    "ts-node": "^8.3.0",
+    "typescript": "^3.6.3"
+  },
+  "devDependencies": {
+    "husky": "^3.0.0",
+    "jest": "^24.8.0",
+    "lint-staged": "^9.1.0",
+    "oberon-prettier-config": "^1.0.0",
+    "prettier": "^1.18.2",
+    "tslint": "^5.19.0",
+    "tslint-config-oberon": "^1.2.0",
+    "tslint-config-prettier": "^1.18.0"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "tslint --fix --project .",
+      "git add"
+    ]
+  },
+  "prettier": "oberon-prettier-config",
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run test && npm run typecheck && lint-staged"
+    }
+  }
+}
