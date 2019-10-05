@@ -1,6 +1,6 @@
-# oberon-oberpoll-slackbot
+# Polling Slackbot
 
-Oberon version of Simple Poll
+Remake of Simple Poll
 
 ## Local Development
 
