@@ -1,0 +1,42 @@
+{
+    "extends": [
+        "tslint-config-oberon",
+        "tslint-config-prettier"
+    ],
+    "linterOptions": {
+        "exclude": [
+            "**/**.js"
+        ]
+    },
+    "rules": {
+        "no-var-requires": false,
+        "interface-name": false,
+        "max-line-length": [
+            true, {
+                "limit": 120,
+                "ignore-pattern": "^\\s*(d|points)=\"[A-Za-z.0-9,\\s-]*\"$"
+            }
+        ],
+       "no-console": [
+           true, 
+           "clear", 
+           "assert", 
+           "count", 
+           "countReset", 
+           "dir", 
+           "dirxml", 
+           "group", 
+           "groupCollapsed", 
+           "groupEnd", 
+           "log", 
+           "profile", 
+           "profileEnd", 
+           "table", 
+           "time", 
+           "timeEnd", 
+           "timeStamp", 
+           "trace", 
+           "warn"
+        ]
+    }
+}
