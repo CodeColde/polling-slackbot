@@ -7,7 +7,7 @@ Remake of Simple Poll
 Install the app into a certain slack channel, whether it be your personal one or an oberon one.
 
 Install (localtunnel)[https://github.com/localtunnel/localtunnel] or (ngrok)[https://ngrok.com].
-Then go into the oberon slack app directory and set up the interactive messages URL to the following:
+Then go into the slack app directory and set up the interactive messages URL to the following:
 > https://<localtunnelurlhere>.com/slack/actions.
 
 Reinstall your app to the environment.
